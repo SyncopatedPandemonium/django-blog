@@ -84,11 +84,18 @@ DATABASES = {
 
 MARKDOWNIFY = {
     "default": {
+        "BLEACH": True,
+        "MARKDOWN_EXTENSIONS": [
+            'markdown.extensions.fenced_code',
+        ],
         "WHITELIST_TAGS": [
-            'h1'
+            'h1',
+            'h2',
+            'h3',
             'a',
             'abbr',
             'acronym',
+            'blockquote',
             'b',
             'code',
             'em',
@@ -98,7 +105,7 @@ MARKDOWNIFY = {
             'p',
             'strong',
             'ul',
-            'br'
+            'br',
         ],
         "WHITELIST_ATTRS": [
             'href',
