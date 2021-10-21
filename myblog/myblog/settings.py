@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'markdownify.apps.MarkdownifyConfig',
     'blog',
 ]
 
@@ -81,6 +82,32 @@ DATABASES = {
     }
 }
 
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": [
+            'h1'
+            'a',
+            'abbr',
+            'acronym',
+            'b',
+            'code',
+            'em',
+            'i',
+            'li',
+            'ol',
+            'p',
+            'strong',
+            'ul',
+            'br'
+        ],
+        "WHITELIST_ATTRS": [
+            'href',
+            'src',
+            'alt',
+        ]
+    }
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
