@@ -57,6 +57,14 @@ background-color: white;
 padding: 20px;
 }
 
+.main > div.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4e9e4;
+    }
+
 /* Footer */
 footer {
 padding: 20px;
@@ -78,7 +86,7 @@ align-items: center;
 }
 
 .flex-container > div {
-background-color: #A1D5D4;
+background-color: #d4e9e4;
 width: 80%;
 margin: 5px;
 text-align: center;
