@@ -107,11 +107,14 @@ MARKDOWNIFY = {
             'strong',
             'ul',
             'br',
+            'img',
         ],
         "WHITELIST_ATTRS": [
             'href',
             'src',
             'alt',
+            'target',
+            'title'
         ]
     }
 
@@ -159,3 +162,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass

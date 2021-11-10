@@ -2,12 +2,46 @@
 <html>
 <head>
     <meta charset="UTF-8">
-
     <title>Blog</title>
 </head>
 <body>
-    {% for blog in blog_posts %}
-        <p> <a href="/blog/{{ blog.id }}/">{{ blog.title }}</a> </p>
-    {% endfor %}
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+    
+    <!-- Header -->
+    <header class="header">
+      <h1>Welcome To My Blog</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <navbar class="navbar">
+      <a href="http://annakowalczyk.eu.pythonanywhere.com/admin/">Admin</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </navbar>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <sidebar>
+        <h2>About Blog</h2>
+        <p>Some text</p>
+      </sidebar>
+      <div class="main">
+        <h2>POSTS</h2>
+            {% for blog in blog_posts %}
+                <div class="flex-container">
+                    <div><p> <a href="/blog/{{ blog.id }}/">{{ blog.title }}</a> </p></div>
+                </div>
+            {% endfor %}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+
 </body>
 </html>
