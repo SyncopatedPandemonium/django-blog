@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-  
+
 /* Style the body */
 body {
 font-family: Arial;
@@ -10,7 +10,7 @@ margin: 0;
 
 /* Header/logo Title */
 header {
-padding: 60px;
+padding: 30px;
 text-align: center;
 background: #1abc9c;
 color: white;
@@ -57,13 +57,19 @@ background-color: white;
 padding: 20px;
 }
 
+.main h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main > div.post {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #d4e9e4;
-    }
+}
 
 /* Footer */
 footer {
@@ -79,17 +85,77 @@ background: #ddd;
 }
 }
 
-.flex-container {
+article {
+display: flex;
+flex-direction: column;
+}
+
+article > .article_header {
+display: flex;
+
+align-items: center;
+justify-content: space-around;
+border-radius: 15px;
+background-color: #bee7dd;
+}
+
+article > .article_body {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 15px;
+background-color: #e4eeec;
+margin: 20px 0 0 0;
+padding: 20px;
+}
+
+article > .article_body a{
+text-decoration: none;
+}
+
+article > .article_body a:visited{
+color: #13705e;
+}
+
+article > .article_body a:hover{
+color: rgb(120, 120, 120);
+}
+
+article > .article_body img{
+width: 80%;
+display: block;
+margin: 0 auto;
+}
+
+.post_title {
 display: flex;
 justify-content: center;
 align-items: center;
 }
 
-.flex-container > div {
+.post_title a {
+flex-wrap: wrap;
 background-color: #d4e9e4;
-width: 80%;
+color: black;
+border-radius: 15px;
+width: 60%;
 margin: 5px;
 text-align: center;
-line-height: 7px;
+line-height: 20px;
 font-size: 15px;
+padding: 10px 20px;
+text-decoration: none;
+text-align: center;
+}
+
+/* visited link */
+.post_title a:visited {
+color: black;
+}
+
+/* Change color on hover */
+.post_title a:hover{
+background-color: #bee7dd;
+color: rgb(120, 120, 120);
 }
