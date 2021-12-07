@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
+
     <title>Blog</title>
 </head>
 <body>
 
     {% load static %}
+    {% load markdownify %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
-    
+
     <!-- Header -->
     <header class="header">
       <h1>Welcome To My Blog</h1>
@@ -31,8 +34,8 @@
       <div class="main">
         <h2>POSTS</h2>
             {% for blog in blog_posts %}
-                <div class="flex-container">
-                    <div><p> <a href="/blog/{{ blog.id }}/">{{ blog.title }}</a> </p></div>
+                <div class="post_title">
+                    <a href="/blog/{{ blog.id }}/">{{ blog.title }}</a>
                 </div>
             {% endfor %}
       </div>
