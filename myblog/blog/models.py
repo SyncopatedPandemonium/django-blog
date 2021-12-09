@@ -7,4 +7,4 @@ class Blog(models.Model):
     date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.title} {self.date:%B %d, %Y}'
+        return f"{self.title} {self.date:%B %d, %Y}"
